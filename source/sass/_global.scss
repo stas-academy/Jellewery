@@ -1,0 +1,79 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $poppins;
+  font-size: 16px;
+  line-height: 130%;
+  color: $main;
+}
+body.lock {
+  overflow: hidden;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1271px;
+  margin: 0 auto;
+  padding: 0 50px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 45px;
+
+  }
+
+  @media (max-width: $mobile-width) {
+  padding: 0 15px;
+  }
+}
+
+
+//*
+//*
+//*reset*
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

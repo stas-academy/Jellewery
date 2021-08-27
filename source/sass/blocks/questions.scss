@@ -1,0 +1,148 @@
+.questions {
+  margin-bottom: 105px;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 48px;
+    font-family: $cormorant;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 130%;/* or 44px */
+    color: $main;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+}
+
+.questions__accordion {
+  max-width: 970px;
+  margin: 0 auto;
+  border: 1px solid $brown;
+  border-bottom: none;
+}
+// Item
+.questions__accordion-item {
+  padding-bottom: 2px;
+  border-bottom: 1px solid $brown;
+}
+// Тригер
+.questions__accordion-trigger {
+  display: flex;
+  cursor: pointer;
+  padding: 42px 43px 43px;
+
+
+  h3 {
+    margin: 0;
+    font-family: $poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;/* or 23px */
+    color: $main;
+  }
+
+  &:hover,
+  &:focus {
+    h3 {
+      color: $brown;
+    }
+    svg {
+      stroke: $main;
+    }
+  }
+}
+// Кнопка аккордиона
+.questions__accordion-btn {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+
+  svg {
+    fill: none;
+    stroke: $brown;
+    transform: rotate(180deg);
+  }
+}
+// Content
+.questions__accordion-content {
+  padding: 10px 399px 41px 50px;
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%; /* or 21px */
+  border-top: none;
+  display: none;
+}
+
+// Active accordion
+.questions__accordion-item--active .questions__accordion-btn {
+  svg {
+    transform: rotate(0);
+  }
+}
+.questions__accordion-item--active .questions__accordion-content {
+  display: block;
+  // padding-bottom: 0;
+}
+.questions__accordion-item--active .questions__accordion-trigger {
+  padding-bottom: 0;
+}
+
+//tablet
+@media (max-width: $tablet-width) {
+  .questions {
+    margin-bottom: 75px;
+  }
+  .questions__accordion-item {
+    padding-bottom: 0;
+  }
+  .questions__accordion-trigger {
+    padding-left: 49px;
+    padding-bottom: 39px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .questions__accordion-content {
+    padding: 22px 94px 46px 50px;
+  }
+}
+
+//mobile
+@media (max-width: $mobile-width) {
+  .questions {
+    margin-bottom: 61px;
+    h2 {
+      margin-bottom: 28px;
+    }
+  }
+
+  .questions__accordion-item {
+    padding-bottom: 4px;
+  }
+
+  .questions__accordion-trigger {
+    padding: 18px 16px 18px 24px;
+
+    h3 {
+      font-size: 16px;
+    }
+
+    span {
+      display: block;
+    }
+  }
+  .questions__accordion-btn {
+    margin-top: -17px;
+  }
+
+  .questions__accordion-content {
+    padding: 19px 40px 19px 24px;
+    font-size: 14px;
+    line-height: 140%;
+  }
+}

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="Ювелирные изделия">
+  <meta name="description" content="Ювелирные изделия">
+  <title>Jellewery</title>
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-MediumItalic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header id="header" class="header">
+    <nav class="nav nav--nojs">
+      <div class="container">
+        <div class="nav__top">
+
+          <button class="nav__burger">
+            <span class="hidden">открыть-закрыть</span>
+            <svg width="25" height="18" viewBox="0 0 25 18">
+              <use xlink:href="img/sprite_auto.svg#icon-burger"></use>
+            </svg>
+          </button>
+          <div class="nav__search">
+            <form action="https://echo.htmlacademy.ru/courses">
+              <input id="search-inp" type="search" name="search" placeholder="Type here to search">
+              <label class="hidden" for="search-inp">Type here to search</label>
+            </form>
+          </div>
+          <div class="nav__logo">
+            <a>
+              <svg width="66" height="66" viewBox="0 0 66 66">
+                <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="nav__init">
+            <div class="nav__init-list">
+              <div class="nav__init-item nav__init-item--login">
+                <a class="nav__init-link nav__init-link--login" href="login.html" data-modal="1">Login</a>
+              </div>
+              <div class="nav__init-item nav__init-item--bas">
+                <a class="nav__init-link nav__init-link--bas" href="#">
+                  <span>Cart 0</span>
+                  <svg width="20" height="18" viewBox="0 0 20 18">
+                    <use xlink:href="img/sprite_auto.svg#icon-bas"></use>
+                  </svg>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="nav__menu">
+        <ul class="nav__menu-list">
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#">What’s new</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#">Chokers</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#">Necklaces</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#">Rings</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#">Earrings</a>
+          </li>
+        </ul>
+
+        <ul class="nav__menu-list nav__menu-list--hiden">
+          <li class="nav__menu-item nav__menu-item--hiden">
+            <a class="nav__menu-link nav__menu-link--hiden" href="#">About CH</a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--hiden">
+            <a class="nav__menu-link nav__menu-link--hiden" href="#">Stores & Hours</a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--hiden">
+            <a class="nav__menu-link nav__menu-link--hiden" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <main class="main">
+      <h1 class="hidden">Perfection</h1>
+
+      <section class="title">
+        <div class="title__wrapper">
+          <div class="title__content">
+            <h2>Perfection</h2>
+            <p>Made to be yours</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="new-in">
+        <div class="container">
+          <div class="new-in__title">
+            <h2>New In</h2>
+            <a class="new-in__link-all" href="catalog.html">Shop Now</a>
+          </div>
+          <!-- buttons-slider -->
+          <div class="new-in__slider-controls">
+            <button class="new-in__slider-btn new-in__slider-btn--prev" type="button">
+              <svg width="30" height="11" viewBox="0 0 30 11">
+                <use xlink:href="img/sprite_auto.svg#icon-leftarrow"></use>
+              </svg>
+              <span class="hidden">next</span>
+            </button>
+            <button class="new-in__slider-btn new-in__slider-btn--next" type="button">
+              <svg width="30" height="11" viewBox="0 0 30 11">
+                <use xlink:href="img/sprite_auto.svg#icon-rightarrow"></use>
+              </svg>
+              <span class="hidden">prev</span>
+            </button>
+          </div>
+          <!-- Slider -->
+          <div class="new-in__slider swiper-container">
+            <div class="new-in__slider-wrapper swiper-wrapper">
+
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog1-desktop@1x.webp 1x, img/slides/catalog1-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog1-desktop@1x.png"
+                          srcset="img/slides/catalog1-desktop@1x.png 1x, img/slides/catalog1-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Necklace with amethyst</h2>
+                    <span>$ 145</span>
+                  </a>
+                </article>
+              </div>
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog2-desktop@1x.webp 1x, img/slides/catalog2-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog2-desktop@1x.png"
+                          srcset="img/slides/catalog2-desktop@1x.png 1x, img/slides/catalog2-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Layered сhoker</h2>
+                    <span>$ 115</span>
+                  </a>
+                </article>
+              </div>
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog3-desktop@1x.webp 1x, img/slides/catalog3-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog3-desktop@1x.png"
+                          srcset="img/slides/catalog3-desktop@1x.png 1x, img/slides/catalog3-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Gold chain</h2>
+                    <span>$ 215</span>
+                  </a>
+                </article>
+              </div>
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog4-desktop@1x.webp 1x, img/slides/catalog4-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog4-desktop@1x.png"
+                          srcset="img/slides/catalog4-desktop@1x.png 1x, img/slides/catalog4-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Galaxy earrings</h2>
+                    <span>$ 95</span>
+                  </a>
+                </article>
+              </div>
+
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog1-desktop@1x.webp 1x, img/slides/catalog1-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog1-desktop@1x.png"
+                          srcset="img/slides/catalog1-desktop@1x.png 1x, img/slides/catalog1-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Necklace with amethyst</h2>
+                    <span>$ 145</span>
+                  </a>
+                </article>
+              </div>
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog2-desktop@1x.webp 1x, img/slides/catalog2-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog2-desktop@1x.png"
+                          srcset="img/slides/catalog2-desktop@1x.png 1x, img/slides/catalog2-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Layered сhoker</h2>
+                    <span>$ 115</span>
+                  </a>
+                </article>
+              </div>
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog3-desktop@1x.webp 1x, img/slides/catalog3-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog3-desktop@1x.png"
+                          srcset="img/slides/catalog3-desktop@1x.png 1x, img/slides/catalog3-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Gold chain</h2>
+                    <span>$ 215</span>
+                  </a>
+                </article>
+              </div>
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog4-desktop@1x.webp 1x, img/slides/catalog4-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog4-desktop@1x.png"
+                          srcset="img/slides/catalog4-desktop@1x.png 1x, img/slides/catalog4-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Galaxy earrings</h2>
+                    <span>$ 95</span>
+                  </a>
+                </article>
+              </div>
+
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="#product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog1-desktop@1x.webp 1x, img/slides/catalog1-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog1-desktop@1x.png"
+                          srcset="img/slides/catalog1-desktop@1x.png 1x, img/slides/catalog1-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Necklace with amethyst</h2>
+                    <span>$ 145</span>
+                  </a>
+                </article>
+              </div>
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog2-desktop@1x.webp 1x, img/slides/catalog2-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog2-desktop@1x.png"
+                          srcset="img/slides/catalog2-desktop@1x.png 1x, img/slides/catalog2-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Layered сhoker</h2>
+                    <span>$ 115</span>
+                  </a>
+                </article>
+              </div>
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog3-desktop@1x.webp 1x, img/slides/catalog3-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog3-desktop@1x.png"
+                          srcset="img/slides/catalog3-desktop@1x.png 1x, img/slides/catalog3-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Gold chain</h2>
+                    <span>$ 215</span>
+                  </a>
+                </article>
+              </div>
+              <div class="new-in__slide swiper-slide">
+                <article class="new-in__card">
+                  <a href="product-card.html">
+                    <div class="new-in__card-image">
+                      <picture>
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <source type="image/webp"
+                          srcset="img/slides/catalog4-desktop@1x.webp 1x, img/slides/catalog4-desktop@2x.webp 2x">
+                        <!-- 1x: 270px; 2x: 540px -->
+                        <img src="img/slides/catalog4-desktop@1x.png"
+                          srcset="img/slides/catalog4-desktop@1x.png 1x, img/slides/catalog4-desktop@2x.png 2x"
+                          width="270" height="284" alt="images">
+                      </picture>
+                    </div>
+                    <h2>Galaxy earrings</h2>
+                    <span>$ 95</span>
+                  </a>
+                </article>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- pagination -->
+          <div class="new-in__slider-pagination swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section class="blog">
+        <div class="container">
+          <h2>Blog</h2>
+          <a class="blog__link-all" href="#">Read All</a>
+          <ul class="blog__list">
+            <li class="blog__item">
+              <div class="blog__img">
+                <picture>
+                  <!-- 1x: 290px; 2x: 580px -->
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/blog1-mobile@1x.webp 1x, img/blog1-mobile@2x.webp 2x">
+                  <!-- 1x: 339px; 2x: 678px -->
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/blog1-tablet@1x.webp 1x, img/blog1-tablet@2x.webp 2x">
+                  <!-- 1x: 285px; 2x: 570px -->
+                  <source type="image/webp" media="(min-width: 1024px)"
+                    srcset="img/blog1-desktop@1x.webp 1x, img/blog1-desktop@2x.webp 2x">
+                  <!-- 1x: 285px; 2x: 570px -->
+                  <img src="img/blog1-desktop@1x.jpg" srcset="img/blog1-desktop@1x.jpg 1x, img/blog1-desktop@2x.jpg 2x"
+                    width="285" height="300" alt="image1">
+                </picture>
+              </div>
+              <blockquote class="blog__blockquote">
+                <div class="blog__blockquote-wrapper">
+                  <span>September 30, 2019</span>
+                  <p>How to care for your jewellery</p>
+                  <a href="#">Read Article</a>
+                </div>
+              </blockquote>
+            </li>
+            <li class="blog__item blog__item--main">
+              <div class="blog__img">
+                <picture>
+                  <!-- 1x: 290px; 2x: 580px -->
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/blog2-mobile@1x.webp 1x, img/blog2-mobile@2x.webp 2x">
+                  <!-- 1x: 339px; 2x: 678px -->
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/blog2-tablet@1x.webp 1x, img/blog2-tablet@2x.webp 2x">
+                  <!-- 1x: 285px; 2x: 570px -->
+                  <source type="image/webp" media="(min-width: 1024px)"
+                    srcset="img/blog2-desktop@1x.webp 1x, img/blog2-desktop@2x.webp 2x">
+                  <!-- 1x: 285px; 2x: 570px -->
+                  <img src="img/blog2-desktop@1x.jpg" srcset="img/blog2-desktop@1x.jpg 1x, img/blog2-desktop@2x.jpg 2x"
+                    width="285" height="300" alt="image2">
+                </picture>
+              </div>
+              <blockquote class="blog__blockquote blog__blockquote--main">
+                <div class="blog__blockquote-wrapper">
+                  <span>September 16, 2019</span>
+                  <p>AW 19 trends</p>
+                  <a href="#">Read Article</a>
+                </div>
+              </blockquote>
+            </li>
+            <li class="blog__item">
+              <div class="blog__img">
+                <picture>
+                  <!-- 1x: 290px; 2x: 580px -->
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/blog3-mobile@1x.webp 1x, img/blog3-mobile@2x.webp 2x">
+                  <!-- 1x: 339px; 2x: 678px -->
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/blog3-tablet@1x.webp 1x, img/blog3-tablet@2x.webp 2x">
+                  <!-- 1x: 285px; 2x: 570px -->
+                  <source type="image/webp" media="(min-width: 1024px)"
+                    srcset="img/blog3-desktop@1x.webp 1x, img/blog3-desktop@2x.webp 2x">
+                  <!-- 1x: 285px; 2x: 570px -->
+                  <img src="img/blog3-desktop@1x.jpg" srcset="img/blog3-desktop@1x.jpg 1x, img/blog3-desktop@2x.jpg 2x"
+                    width="285" height="300" alt="image3">
+                </picture>
+              </div>
+              <blockquote class="blog__blockquote">
+                <div class="blog__blockquote-wrapper">
+                  <span>September 23, 2019</span>
+                  <p>Power of crystalsy</p>
+                  <a href="#">Read Article</a>
+                </div>
+              </blockquote>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="questions">
+        <div class="container">
+          <h2>Frequently asked questions</h2>
+          <div class="questions__accordion accordion">
+
+            <div class="questions__accordion-item questions__accordion-item--active">
+              <div class="questions__accordion-trigger">
+                <h3>What materials are<span>the jewellery made of?</span></h3>
+                <button class="questions__accordion-btn" type="button">
+                  <svg width="17" height="10" viewBox="0 0 17 10">
+                    <use xlink:href="img/sprite_auto.svg#icon-toparrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="questions__accordion-content">
+                Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.
+              </div>
+            </div>
+
+            <div class="questions__accordion-item">
+              <div class="questions__accordion-trigger">
+                <h3>Which countries <span>do you deliver to?</span></h3>
+                <button class="questions__accordion-btn" type="button">
+                  <svg width="17" height="10" viewBox="0 0 17 10">
+                    <use xlink:href="img/sprite_auto.svg#icon-toparrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="questions__accordion-content">
+                Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.
+              </div>
+            </div>
+
+            <div class="questions__accordion-item">
+              <div class="questions__accordion-trigger">
+                <h3>What are the <span>payment methods?</span></h3>
+                <button class="questions__accordion-btn" type="button">
+                  <svg width="17" height="10" viewBox="0 0 17 10">
+                    <use xlink:href="img/sprite_auto.svg#icon-toparrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="questions__accordion-content">
+                Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.
+              </div>
+            </div>
+
+            <div class="questions__accordion-item">
+              <div class="questions__accordion-trigger">
+                <h3>Can I return the <span>jewellery if it didn’t fit me?</span></h3>
+                <button class="questions__accordion-btn" type="button">
+                  <svg width="17" height="10" viewBox="0 0 17 10">
+                    <use xlink:href="img/sprite_auto.svg#icon-toparrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="questions__accordion-content">
+                Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="container">
+          <h2>@Chjewellery</h2>
+          <a class="gallery__link-all" href="#">Follow Us</a>
+
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <picture>
+                <!-- 1x: 233px; 2x: 466px -->
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/gallery/g1-mob@1x.webp 1x, img/gallery/g1-mob@2x.webp 2x">
+                <!-- 1x: 133px; 2x: 266px -->
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/gallery/g1-tablet@1x.webp 1x, img/gallery/g1-tablet@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 460px -->
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/gallery/g1-desktop@1x.webp 1x, img/gallery/g1-desktop@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 460px -->
+                <img src="img/gallery/g1-desktop@1x.jpg"
+                  srcset="img/gallery/g1-desktop@1x.jpg 1x, img/gallery/g1-desktop@2x.jpg 2x" width="230" height="230"
+                  alt="img">
+              </picture>
+            </li>
+            <li class="gallery__item gallery__item--main">
+              <picture>
+                <!-- 1x: 133px; 2x: 466px -->
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/gallery/g2-mob@1x.webp 1x, img/gallery/g2-mob@2x.webp 2x">
+                <!-- 1x: 133px; 2x: 266px -->
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/gallery/g2-tablet@1x.webp 1x, img/gallery/g2-tablet@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 460px -->
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/gallery/g2-desktop@1x.webp 1x, img/gallery/g2-desktop@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 460px -->
+                <img src="img/gallery/g2-desktop@1x.jpg"
+                  srcset="img/gallery/g2-desktop@1x.jpg 1x, img/gallery/g2-desktop@1x.jpg 2x" width="230" height="230"
+                  alt="img">
+              </picture>
+            </li>
+            <li class="gallery__item gallery__item--hidden">
+              <picture>
+                <!-- 1x: 230px; 2x: 460px -->
+                <img src="img/gallery/g3-desktop@1x.jpg"
+                  srcset="img/gallery/g3-desktop@1x.jpg 1x, img/gallery/g3-desktop@2x.jpg 2x" width="230" height="230"
+                  alt="img">
+              </picture>
+            </li>
+            <li class="gallery__item gallery__item--hidden">
+              <picture>
+                <!-- 1x: 230px; 2x: 460px -->
+                <img src="img/gallery/g4-desktop@1x.jpg"
+                  srcset="img/gallery/g4-desktop@1x.jpg 1x, img/gallery/g4-desktop@2x.jpg 2x" width="230" height="230"
+                  alt="img">
+              </picture>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <!-- 1x: 133px; 2x: 466px -->
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/gallery/g5-mob@1x.webp 1x, img/gallery/g5-mob@2x.webp 2x">
+                <!-- 1x: 133px; 2x: 466px -->
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/gallery/g5-tablet@1x.webp 1x, img/gallery/g5-tablet@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 460px -->
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/gallery/g5-desktop@1x.webp 1x, img/gallery/g5-desktop@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 460px -->
+                <img src="img/gallery/g5-desktop@1x.jpg"
+                  srcset="img/gallery/g5-desktop@1x.jpg 1x, img/gallery/g5-desktop@2x.jpg 2x" width="230" height="230"
+                  alt="img">
+              </picture>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <!-- 1x: 133px; 2x: 466px -->
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/gallery/g6-mob@1x.webp 1x, img/gallery/g6-mob@2x.webp 2x">
+                <!-- 1x: 133px; 2x: 466px -->
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/gallery/g6-tablet@1x.webp 1x, img/gallery/g6-tablet@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 460px -->
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/gallery/g6-desktop@1x.webp 1x, img/gallery/g6-desktop@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 460px -->
+                <img src="img/gallery/g6-desktop@1x.jpg"
+                  srcset="img/gallery/g6-desktop@1x.jpg 1x, img/gallery/g6-desktop@2x.jpg 2x" width="230" height="230"
+                  alt="img">
+              </picture>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <!-- 1x: 133px; 2x: 466px -->
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/gallery/g7-mob@1x.webp 1x, img/gallery/g7-mob@2x.webp 2x">
+                <!-- 1x: 133px; 2x: 466px -->
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/gallery/g7-tablet@1x.webp 1x, img/gallery/g7-tablet@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 460px -->
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/gallery/g7-desktop@1x.webp 1x, img/gallery/g7-desktop@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 460px -->
+                <img src="img/gallery/g7-desktop@1x.jpg"
+                  srcset="img/gallery/g7-desktop@1x.jpg 1x, img/gallery/g7-desktop@2x.jpg 2x" width="230" height="230"
+                  alt="img">
+              </picture>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div class="container">
+
+        <div class="footer__wrapper">
+          <div class="footer__form">
+            <h2>The good stuff in your inbox</h2>
+            <p>News and updates from CH. No spam, we promise.</p>
+            <form action="https://echo.htmlacademy.ru/courses">
+              <div class="footer__form-input-box">
+                <input id="inp-foo" type="email" name="subscription" placeholder="Your E-mail"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                <label class="hidden" for="inp-foo">Your E-mail</label>
+              </div>
+              <button class="footer__form-btn" type="submit">
+                <span>Sign Up</span>
+                <svg width="30" height="11" viewBox="0 0 30 11">
+                  <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <div class="footer__menu">
+            <ul class="footer__menu-list">
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Ordering & Payment</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Terms & Conditions</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Returns & Exchanges</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Delivery</a>
+              </li>
+            </ul>
+            <ul class="footer__menu-list">
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">About CH</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Stores & Hours</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Jobs</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg width="15" height="15" viewBox="0 0 8 15">
+                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg width="15" height="15" viewBox="0 0 15 15">
+                  <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg width="16" height="15" viewBox="0 0 16 15">
+                  <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
+                </svg>
+                <span>Pinterest</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg width="15" height="13" viewBox="0 0 15 13">
+                  <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+                </svg>
+                <span>Twitter</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <section class="popup-login" id="myModal" aria-hidden="true">
+    <div class="popup-login__dialog" role="dialog" aria-modal="true">
+
+      <div class="popup-login__image">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/popap-mob@1x.webp 1x, img/popap-mob@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)"
+            srcset="img/popap-tab@1x.webp 1x, img/popap-tab@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1024px)"
+            srcset="img/popap-desktop@1x.webp 1x, img/popap-desktop@2x.webp 2x">
+          <!--  -->
+          <img src="img/popap-desktop@1x.jpg" srcset="img/popap-desktop@1x.jpg 1x, img/popap-desktop@2x.jpg 2x"
+            width="430" height="138" alt="popap-image">
+        </picture>
+      </div>
+      <h2>Log In</h2>
+
+      <div class="popup-login__close">
+        <button tabindex="6" class="popup-login__close-btn" type="button">
+          <span class="hidden">Закрыть</span>
+        </button>
+      </div>
+
+      <div class="popup-login__form">
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <div class="popup-login__form-field">
+            <input autofocus tabindex="1" data-focus="focus" type="email" name="mail" id="input-1"
+              placeholder="Your E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            <label class="hidden" for="input-1">Your E-mail</label>
+          </div>
+          <div class="popup-login__form-field">
+            <input tabindex="2" type="password" name="password" id="input-2" placeholder="Password" minlength="5"
+              maxlength="20" required>
+            <label class="hidden" for="input-2">Password</label>
+            <a tabindex="3" href="#">Forgot your password?</a>
+          </div>
+          <button tabindex="4" class="btn-popup" type="submit">Log In</button>
+        </form>
+      </div>
+      <div class="popup-login__signup">
+        <p>Don’t have an account?<a tabindex="5" href="#">Sign up</a></p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

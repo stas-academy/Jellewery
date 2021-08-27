@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Product add card</title>
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-MediumItalic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header id="header" class="header">
+
+    <nav class="nav nav--nojs">
+      <div class="container">
+        <div class="nav__top">
+
+          <button class="nav__burger">
+            <span class="hidden">открыть-закрыть</span>
+            <svg width="25" height="18" viewBox="0 0 25 18">
+              <use xlink:href="img/sprite_auto.svg#icon-burger"></use>
+            </svg>
+          </button>
+
+          <div class="nav__search">
+            <form action="https://echo.htmlacademy.ru/courses">
+              <input id="search-inp" type="search" name="search" placeholder="Type here to search">
+              <label class="hidden" for="search-inp">Type here to search</label>
+            </form>
+          </div>
+
+          <div class="nav__logo">
+            <a href="index.html">
+              <svg width="66" height="66" viewBox="0 0 66 66">
+                <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="nav__init">
+            <div class="nav__init-list">
+              <div class="nav__init-item nav__init-item--login">
+                <a class="nav__init-link nav__init-link--login" href="login.html">Login</a>
+              </div>
+              <div class="nav__init-item nav__init-item--bas">
+                <a class="nav__init-link nav__init-link--bas" href="#">
+                  <span>Cart 0</span>
+                  <svg width="20" height="18" viewBox="0 0 20 18">
+                    <use xlink:href="img/sprite_auto.svg#icon-bas"></use>
+                  </svg>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="nav__menu">
+        <ul class="nav__menu-list">
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#">What’s new</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#">Chokers</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#">Necklaces</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#">Rings</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#">Earrings</a>
+          </li>
+        </ul>
+
+        <ul class="nav__menu-list nav__menu-list--hiden">
+          <li class="nav__menu-item nav__menu-item--hiden">
+            <a class="nav__menu-link nav__menu-link--hiden" href="#">About CH</a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--hiden">
+            <a class="nav__menu-link nav__menu-link--hiden" href="#">Stores & Hours</a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--hiden">
+            <a class="nav__menu-link nav__menu-link--hiden" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <main class="main">
+      <h1 class="hidden">Product add card</h1>
+
+      <section class="add-card">
+        <div class="add-card__content">
+          <h2>The item was added to your cart</h2>
+          <div class="add-card__card">
+            <div class="add-card__card-img">
+              <picture>
+                <img src="img/product/product-modal-desc@1x.jpg"
+                  srcset="img/product/product-modal-desc@1x.jpg 1x, img/product/product-modal-desc@2x.jpg 2x" width="84"
+                  height="79" alt="image">
+              </picture>
+            </div>
+            <div class="add-card__card-text">
+              <h3>Gold Necklace </h3>
+              <span>$ 115</span>
+            </div>
+            <div class="add-card__card-option">
+              <div class="add-card__card-option-btn add-card__card-option-btn--plus">
+                <button type="button"><span class="hidden">Plus</span></button>
+              </div>
+              <div class="add-card__card-option-out">
+                <label class="hidden" for="modal-add__out"></label>
+                <input id="modal-add__out" type="text" placeholder="1">
+              </div>
+              <div class="add-card__card-option-btn add-card__card-option-btn--minus">
+                <button type="button"><span class="hidden">Minus</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="add-card__info">
+            <div class="add-card__info-card">
+              <p>You have 1 item in the cart</p>
+            </div>
+            <div class="add-card__info-total">
+              <p>Cart subtotal:
+                <span>$ 115</span>
+              </p>
+            </div>
+          </div>
+          <div class="add-card__buttons">
+            <div class="add-card__btn add-card__btn--continue">
+              <a class="btn-popup" href="#">Continue shopping</a>
+            </div>
+            <div class="add-card__btn add-card__btn--checkout">
+              <a class="btn-popup" href="#">Checkout</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div class="container">
+
+        <div class="footer__wrapper">
+          <div class="footer__form">
+            <h2>The good stuff in your inbox</h2>
+            <p>News and updates from CH. No spam, we promise.</p>
+            <form action="https://echo.htmlacademy.ru/courses">
+              <div class="footer__form-input-box">
+                <input id="inp-foo" type="email" name="subscription" placeholder="Your E-mail"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                <label class="hidden" for="inp-foo">Your E-mail</label>
+              </div>
+              <button class="footer__form-btn" type="submit">
+                <span>Sign Up</span>
+                <svg width="30" height="11" viewBox="0 0 30 11">
+                  <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <div class="footer__menu">
+            <ul class="footer__menu-list">
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Ordering & Payment</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Terms & Conditions</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Returns & Exchanges</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Delivery</a>
+              </li>
+            </ul>
+            <ul class="footer__menu-list">
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">About CH</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Stores & Hours</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Jobs</a>
+              </li>
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg width="15" height="15" viewBox="0 0 8 15">
+                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg width="15" height="15" viewBox="0 0 15 15">
+                  <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg width="16" height="15" viewBox="0 0 16 15">
+                  <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
+                </svg>
+                <span>Pinterest</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg width="15" height="13" viewBox="0 0 15 13">
+                  <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+                </svg>
+                <span>Twitter</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <section class="popup-login" id="modal-1">
+    <div class="popup-login__dialog">
+
+      <div class="popup-login__image">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/popap-mob@1x.webp 1x, img/popap-mob@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)"
+            srcset="img/popap-tab@1x.webp 1x, img/popap-tab@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1024px)"
+            srcset="img/popap-desktop@1x.webp 1x, img/popap-desktop@2x.webp 2x">
+          <!--  -->
+          <img src="img/popap-desktop@1x.jpg" srcset="img/popap-desktop@1x.jpg 1x, img/popap-desktop@2x.jpg 2x"
+            width="430" height="138" alt="popap-image">
+        </picture>
+      </div>
+      <h2>Log In</h2>
+
+      <div class="popup-login__close">
+        <button class="popup-login__close-btn" type="button">
+          <span class="hidden">Закрыть</span>
+        </button>
+      </div>
+
+      <div class="popup-login__form">
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <div class="popup-login__form-field">
+            <input type="email" name="mail" id="input-1" placeholder="Your E-mail"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            <label class="hidden" for="input-1">Your E-mail</label>
+          </div>
+          <div class="popup-login__form-field">
+            <input type="password" name="password" id="input-2" placeholder="Password" minlength="5" maxlength="20"
+              required>
+            <label class="hidden" for="input-2">Password</label>
+            <a href="#">Forgot your password?</a>
+          </div>
+          <button class="btn-popup" type="submit">Log In</button>
+        </form>
+      </div>
+      <div class="popup-login__signup">
+        <p>Don’t have an account?<a href="#">Sign up</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

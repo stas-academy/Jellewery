@@ -1,0 +1,263 @@
+.product {
+  display: flex;
+  margin-top: 70px;
+  margin-bottom: 121px;
+}
+
+.product__gallery {
+  width: 51.3%;
+  margin-top: 10px;
+  margin-right: 100px;
+}
+
+.product__gallery-list {
+  display: grid;
+  grid-template-columns: 1fr 4.7fr;
+  grid-template-rows: auto auto auto;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product__gallery-item--main {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.product__info {
+  width: 31.6%;
+
+  h3 {
+    margin: 0 0 12px;
+    font-family: $cormorant;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 130%; /* or 44px */
+  }
+
+  span {
+    display: block;
+    margin-bottom: 38px;
+    font-family: $poppins;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 130%; /* or 34px */
+  }
+}
+
+.product__table {
+  table {
+    width: 100%;
+    margin-bottom: 50px;
+    font-family: $poppins;
+    box-sizing: border-box;
+    border-collapse: collapse;
+  }
+
+  th {
+    padding-bottom: 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: $main;
+    text-align: left;
+    box-sizing: border-box;
+    b{
+      font-weight: 500;
+      color: $grey;
+
+    }
+  }
+
+  td {
+    padding: 10px 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+
+    b {
+      font-weight: 500;
+    }
+
+    span {
+      margin-bottom: 0;
+      font-size: 14px;
+      text-align: right;
+    }
+
+  }
+
+  tr {
+    border-bottom: 1px solid #f6f5f4;
+  }
+
+  .border-none {
+    border: none;
+  }
+}
+
+.product__btn {
+  margin-bottom: 18px;
+
+  a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 100%;
+  padding: 23px 0;
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%; /* or 21px */
+  background-color: $brown;
+  color: $white;
+  border: 1px solid $brown;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $brown;
+  }
+  &:active {
+    border-color: rgba($brown, 0.3);
+    color: rgba($brown, 0.3);
+  }
+  }
+}
+
+.product__advantages {
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &-item {
+    position: relative;
+    flex-grow: 1;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 20px;
+        background-color: #f6f5f4;
+        content: '';
+      }
+  }
+  &-item:first-child {
+    p {
+      text-align: left;
+    }
+  }
+  &-item:last-child {
+    &::after {
+      display: none;
+    }
+    p {
+      text-align: right;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: $grey;
+    text-align: center;
+  }
+}
+
+// Tablet
+@media (max-width: $tablet-width) {
+  .product {
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+
+  .product__gallery {
+    width: 50%;
+    margin-right: 40px;
+  }
+  .product__gallery-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 14px;
+  }
+  .product__gallery-item--main {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .product__info {
+    width: 50%;
+  }
+
+  .product__btn {
+    margin-bottom: 16px;
+  }
+
+  .product__advantages {
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+// Mobile
+@media (max-width: $mobile-width) {
+  .product {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 58px;
+  }
+  .product__gallery {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 41px;
+  }
+  .product__gallery-list {
+    display: block;
+  }
+  .product__gallery-item {
+    display: none;
+  }
+  .product__gallery-item--main {
+    display: block;
+  }
+
+  .product__info {
+    width: 100%;
+
+    span {
+      margin-bottom: 26px;
+    }
+  }
+
+  .product__table {
+    table {
+      margin-bottom: 42px;
+    }
+  }
+  .product__btn {
+    margin-bottom: 12px;
+}
+  .product__advantages {
+    p {
+      font-size: 12px;
+      width: 80%;
+      text-align: center;
+    }
+  }
+}

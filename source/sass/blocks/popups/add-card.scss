@@ -1,0 +1,159 @@
+.add-card {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+}
+
+.add-card__content {
+  width: 500px;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  height: auto;
+  border: 2px solid $brown;
+  box-sizing: border-box;
+
+  h2 {
+    margin: 0;
+    margin-top: 55px;
+    font-family: $cormorant;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 130%;
+    text-align: center;
+  }
+}
+
+.add-card__card {
+  display: flex;
+  padding: 55px 35px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f6f5f4;
+}
+.add-card__card-img {
+  margin-right: 20px;
+}
+.add-card__card-text {
+  h3 {
+    margin: 0 0 10px;
+    font-family: $cormorant;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  span {
+    font-family: $poppins;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+.add-card__card-option {
+  width: 14px;
+  margin-left: auto;
+}
+.add-card__card-option-btn {
+  button {
+    width: 14px;
+    height: 14px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      width: 14px;
+      height: 2px;
+      background-color: $grey;
+      content: '';
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after {
+      background-color: $brown;
+    }
+  }
+}
+.add-card__card-option-btn--plus {
+  button {
+    &::after {
+      position: absolute;
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 14px;
+      height: 2px;
+      background-color: $grey;
+      content: '';
+      transform: rotate(90deg);
+    }
+  }
+}
+.add-card__card-option-out {
+  margin-bottom: 10px;
+  input {
+    font-family: $poppins;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.add-card__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 35px;
+  margin-bottom: 40px;
+
+  p {
+    margin: 0;
+    font-family: $poppins;
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+.add-card__info-card {
+  p {
+    font-weight: normal;
+  }
+}
+.add-card__info-total {
+  p {
+    font-weight: 500;
+  }
+}
+
+.add-card__buttons {
+  display: flex;
+  column-gap: 30px;
+  padding: 0 35px;
+  margin-bottom: 55px;
+
+  a {
+    display: block;
+  }
+}
+.add-card__btn--continue {
+  width: 50%;
+  text-align: center;
+
+  a {
+    background-color: $white;
+    color: $main;
+  }
+}
+.add-card__btn--checkout {
+  width: 50%;
+  text-align: center;
+}

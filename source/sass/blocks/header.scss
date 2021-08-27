@@ -1,0 +1,462 @@
+//top
+.nav .container {
+  padding: 0 45px;
+}
+
+.nav__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 115px;
+}
+
+.nav__burger {
+  display: none;
+}
+
+//input search
+.nav__search {
+  flex: 0 0 200px;
+  margin-bottom: 10px;
+
+  input {
+    padding-left: 34px;
+    background-image: url("../img/icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: 4% 48%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    ::placeholder {
+      font-family: $poppins;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: $grey;
+    }
+    &:hover::placeholder {
+      color: $main;
+    }
+    &:focus::placeholder {
+      visibility: hidden;
+    }
+  }
+}
+
+//logo
+.nav__logo {
+  margin-top: 15px;
+
+  svg {
+    fill: #a87b62;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $main;
+  }
+}
+
+//init block
+.nav__init {
+  flex: 0 0 200px;
+  margin-bottom: 11px;
+}
+
+.nav__init-list {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.nav__init-item {
+  padding-right: 9px;
+  padding-left: 26px;
+  box-sizing: border-box;
+}
+
+.nav__init-item--bas svg {
+  display: none;
+}
+
+.nav__init-link {
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $main;
+
+  &:hover,
+  &:hover {
+    color: $brown;
+  }
+
+  &:active {
+    color: rgba($brown, 0.3);
+  }
+}
+
+//navigation
+.nav__menu {
+  min-height: 60px;
+  border-top: 1px solid #f6f5f4;
+}
+
+.nav__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 528px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 18px;
+  list-style: none;
+}
+
+.nav__menu-item {
+  margin-left: 23px;
+  margin-right: 12px;
+  text-align: center;
+}
+
+.nav__menu-link {
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $main;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: rgba($brown, 0.3);
+  }
+}
+
+.nav__menu-list--hiden {
+  display: none;
+}
+
+//tablet
+@media (max-width: $tablet-width) {
+  .nav__top {
+    min-height: 126px;
+  }
+
+  .nav__menu {
+    display: none;
+  }
+
+  .nav__burger {
+    display: block;
+    width: 34px;
+    height: 22px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      display: block;
+      width: 25px;
+      height: 18px;
+      stroke: #1D1613;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      stroke: $brown;
+    }
+  }
+
+  //search
+  .nav__search {
+    display: none;
+  }
+
+  //logo
+  .nav__logo {
+    margin-right: 0;
+    margin-top: 4px;
+  }
+  //init block
+  .nav__init {
+    margin-bottom: 0;
+    flex-basis: 34px;
+  }
+  .nav__init-item--bas {
+    margin-left: auto;
+    padding: 0;
+
+
+    span {
+      display: none;
+    }
+
+    svg {
+      display: block;
+      fill: transparent;
+      stroke: #1D1613;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      stroke: $brown;
+    }
+  }
+  //open-menu
+  .nav--opened {
+    background-color: #a87b62;
+    padding-bottom: 80px;
+  }
+
+  .nav--opened.nav {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .nav--opened .nav__burger {
+    svg {
+      stroke: $white;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      stroke: $main;
+    }
+  }
+
+  .nav--opened .nav__menu {
+    display: block;
+    border: none;
+  }
+
+  .nav--opened .nav__menu-list {
+    width: 100%;
+    display: block;
+    padding-top: 0;
+    margin-bottom: 55px;
+  }
+
+  .nav--opened .nav__menu-list--hiden {
+    display: block;
+  }
+
+  .nav--opened .nav__menu-item {
+    text-align: left;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 40px;
+  }
+
+  .nav--opened .nav__menu-item--hidden {
+    margin-bottom: 30px;
+  }
+
+  .nav--opened .nav__menu-link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: $white;
+
+    &:hover {
+      color: $main;
+    }
+  }
+
+  .nav--opened .nav__menu-link--hiden {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: rgba($white, 0.75);
+  }
+
+  .nav--opened .nav__search {
+    display: block;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 55px;
+    input {
+      width: 100%;
+      height: 40px;
+      padding-left: 60px;
+      border-radius: 21px;
+      background-color: rgba($white, 0.15);
+      color: $white;
+    }
+    input::placeholder {
+      color: transparent;
+    }
+
+  }
+  //opened-logo
+  .nav--opened .nav__logo {
+    svg {
+      fill: $white;
+    }
+    &:hover svg,
+    &:focus svg {
+      fill: $main;
+    }
+  }
+  //opened-login
+  .nav--opened .nav__init-item--bas {
+    svg {
+      stroke: $white;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      stroke: $main;
+    }
+  }
+  .nav--opened .nav__init-item--login {
+    padding: 0;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 50px;
+
+    a {
+      font-size: 18px;
+      line-height: 23px;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $main;
+      }
+    }
+  }
+
+
+  .nav--nojs {
+    background-color: #a87b62;
+    padding-bottom: 80px;
+  }
+  .nav--nojs .nav__init {
+    flex-basis: 30%;
+  }
+  .nav--nojs .nav__burger {
+    display: none;
+  }
+  .nav--nojs .nav__logo {
+    svg {
+      fill: $white;
+    }
+    &:hover svg,
+    &:focus svg {
+      fill: $main;
+    }
+  }
+  .nav--nojs .nav__menu {
+    display: block;
+    border: none;
+  }
+  .nav--nojs .nav__menu-list {
+    width: 100%;
+    display: block;
+    padding-top: 0;
+    margin-bottom: 55px;
+  }
+  .nav--nojs .nav__menu-list--hiden {
+    display: block;
+  }
+  .nav--nojs .nav__menu-item {
+    text-align: left;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 40px;
+  }
+  .nav--nojs .nav__menu-item--hidden {
+    margin-bottom: 30px;
+  }
+  .nav--nojs .nav__menu-link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: $white;
+
+    &:hover {
+      color: $main;
+    }
+  }
+  .nav--nojs .nav__search {
+    display: block;
+    flex-basis: 30%;
+    input {
+      height: 40px;
+      padding-left: 30px;
+      border-radius: 21px;
+      background-color: rgba($white, 0.15);
+      color: $white;
+    }
+
+  }
+  .nav--nojs .nav__init-item--bas {
+    margin-left: 0;
+    span {
+      display: block;
+    }
+    svg {
+      display: none;
+    }
+    a {
+      font-size: 18px;
+      line-height: 23px;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $main;
+      }
+    }
+
+  }
+  .nav--nojs .nav__init-item--login {
+    a {
+      font-size: 18px;
+      line-height: 23px;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $main;
+      }
+    }
+  }
+}
+
+//mobile
+@media (max-width: $mobile-width) {
+  .nav .container {
+    padding: 0 15px;
+  }
+  .nav__logo {
+    svg {
+      width: 80px;
+      height: 55px;
+    }
+  }
+
+  .nav__top {
+    min-height: 92px;
+  }
+
+  //nav--opened
+  .nav--opened .nav__menu-item {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .nav--opened .nav__search {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .nav--opened .nav__init-item--login {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

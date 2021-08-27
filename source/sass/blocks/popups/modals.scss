@@ -1,0 +1,592 @@
+// =Login popap=
+.popup-login {
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+  opacity: 0;
+  transition: .8s;
+  z-index: 10;
+}
+.popup-login.open {
+  opacity: 1;
+  visibility: visible;
+  overflow-y: scroll;
+}
+.popup-login.open .popup-login__dialog {
+  transform: translateY(0);
+  opacity: 1;
+  }
+
+.popup-login__dialog {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  margin-top: 100px;
+  background-color: #f0eae4;
+  overflow: hidden;
+  transform: translateY(-50px);
+  transition: .8s;
+  box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
+  z-index: 20;
+  h2 {
+    margin: 0;
+    margin-bottom: 23px;
+    font-family: $cormorant;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 130%;/* or 44px */
+    color: $main;
+    text-align: center;
+  }
+}
+
+// Popap close
+.popup-login__close {
+  position: absolute;
+  top: 22px;
+  right: 11px;
+
+  button {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background-color: $main;
+      content: "";
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+      background-color: $brown;
+    }
+  }
+}
+
+.popup-login__image {
+  margin-bottom: 50px;
+}
+// Form
+.popup-login__form {
+  padding: 0 45px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    padding: 15px 0 10px 0;
+    background-color: transparent;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: $main;
+    ::placeholder {
+      font-family: $poppins;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: $grey;
+    }
+    &:hover,
+    &:focus {
+      border-bottom-color: $brown;
+    }
+  }
+  input:hover::placeholder {
+    color: $brown;
+  }
+  input:focus::placeholder {
+    color: transparent;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+.popup-login__form-field {
+  margin-bottom: 23px;
+
+  a {
+    display: block;
+    width: 150px;
+    margin-top: 3px;
+    margin-bottom: 12px;
+    margin-left: auto;
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $grey;
+    text-align: right;
+
+    &:hover,
+    &:focus {
+      color: $brown;
+    }
+  }
+}
+.popup-login__signup {
+  margin-bottom: 55px;
+
+  p {
+    margin: 0;
+    text-align: center;
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $grey;
+  }
+
+  a {
+    display: inline-block;
+    padding-left: 6px;
+    color: $main;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $brown;
+    }
+  }
+}
+
+// Modal add
+.modal-add {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black, 0.25);
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s;
+  z-index: 10;
+}
+
+.modal-add__dialog {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-top: 372px;
+  background-color: $white;
+  overflow: hidden;
+  transform: translateY(-50px);
+  transition: .2s;
+  z-index: 20;
+  box-sizing: border-box;
+
+  h2 {
+    margin: 0;
+    margin-top: 47px;
+    font-family: $cormorant;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 130%;
+    text-align: center;
+  }
+}
+
+.modal-add.open {
+  visibility: visible;
+  opacity: 1;
+  overflow-y: scroll;
+}
+.modal-add.open .modal-add__dialog {
+  transform: translateY(0);
+}
+
+.modal-add__close {
+  position: absolute;
+  top: 17px;
+  right: 13px;
+  button {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 10px;
+      left: 3px;
+      width: 18px;
+      height: 2px;
+      background-color: $main;
+      transform: rotate(45deg);
+      content: '';
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after {
+      background-color: $brown;
+    }
+    &:active::before,
+    &:active::after {
+      background-color: rgba($brown, 0.5);
+    }
+  }
+}
+
+.modal-add__card {
+  display: flex;
+  padding: 46px 35px 33px 35px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #f6f5f4;
+}
+.modal-add__card-img {
+  width: 84px;
+  margin-right: 20px;
+}
+.modal-add__card-text {
+  h3 {
+    margin: -3px 0 7px;
+    font-family: $cormorant;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  span {
+    font-family: $poppins;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+.modal-add__card-option {
+  width: 14px;
+  margin-left: auto;
+}
+.modal-add__card-option-btn {
+  margin-top: -3px;
+  margin-bottom: 12px;
+  button {
+    width: 14px;
+    height: 14px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      width: 14px;
+      height: 2px;
+      background-color: $grey;
+      content: '';
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after {
+      background-color: $brown;
+    }
+  }
+}
+.modal-add__card-option-btn--plus {
+  button {
+    &::after {
+      position: absolute;
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 14px;
+      height: 2px;
+      background-color: $grey;
+      content: '';
+      transform: rotate(90deg);
+    }
+  }
+}
+.modal-add__card-option-out {
+  width: 100%;
+  margin-bottom: 14px;
+  input {
+    width: 20px;
+    font-family: $poppins;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    // background-color: transparent;
+    border: none;
+    z-index: 50;
+    color: $main;
+    box-sizing: border-box;
+    &:focus {
+      color: $main;
+    }
+  }
+}
+
+.modal-add__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 35px;
+  margin-bottom: 36px;
+
+  p {
+    margin: 0;
+    font-family: $poppins;
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+.modal-add__info-card {
+  p {
+    font-weight: normal;
+  }
+}
+.modal-add__info-total {
+  p {
+    font-weight: 500;
+  }
+}
+
+.modal-add__buttons {
+  display: flex;
+  column-gap: 30px;
+  padding: 0 35px;
+  margin-bottom: 55px;
+
+  a {
+    display: block;
+  }
+}
+.modal-add__btn--continue {
+  width: 50%;
+  text-align: center;
+
+  a {
+    background-color: $white;
+    color: $main;
+  }
+}
+.modal-add__btn--checkout {
+  width: 50%;
+  text-align: center;
+}
+
+// Tablet
+@media (max-width: $tablet-width) {
+  .popup-login__dialog {
+    width: 442px;
+    margin-top: 80px;
+  }
+  .popup-login__close {
+    top: 19px;
+    right: 20px;
+    button {
+      width: 22px;
+      height: 20px;
+      &::before,
+      &::after {
+        top: 9px;
+        width: 24px;
+        height: 3px;
+      }
+    }
+  }
+  .popup-login__form {
+    padding: 0 51px;
+  }
+
+  .modal-add__dialog {
+    margin-top: 258px;
+  }
+  .modal-add__card {
+    padding: 46px 29px 29px 29px;
+  }
+  .modal-add__card-img {
+    width: 88px;
+    margin-right: 20px;
+  }
+  .modal-add__info {
+    padding: 0 30px ;
+  }
+  .modal-add__buttons {
+    padding: 0 30px;
+  }
+  .modal-add__card-option-btn {
+    margin-top: 1px;
+    margin-bottom: 12px;
+  }
+  .modal-add__card-option-out {
+    margin-bottom: 11px;
+  }
+}
+
+// Mobile
+@media (max-width: $mobile-width) {
+  .popup-login__dialog {
+    width: 270px;
+    margin-top: 50px;
+    h2 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+  .popup-login__form {
+    padding: 0 15px;
+  }
+  .popup-login__image {
+    margin-bottom: 37px;
+    img {
+      height: 84px;
+    }
+  }
+  .popup-login__close button::after,
+  .popup-login__close button::before {
+    top: 2px;
+    left: 11px;
+    width: 18px;
+    height: 2px;
+}
+  .popup-login__form-field {
+    margin-bottom: 19px;
+    a {
+      margin-bottom: 7px;
+    }
+  }
+  .popup-login__signup {
+    margin-bottom: 37px;
+}
+
+  .modal-add__dialog {
+    width: 290px;
+    margin-top: 117px;
+
+    h2 {
+      margin-top: 39px;
+      padding: 0 40px;
+      font-size: 24px;
+      line-height: 120%;
+    }
+  }
+  .modal-add__close {
+    position: absolute;
+    top: 11px;
+    right: 18px;
+
+    button {
+      width: 16px;
+      height: 16px;
+      &::before,
+      &::after {
+        width: 18px;
+      }
+    }
+}
+  .modal-add__card {
+    padding: 34px 15px 11px;
+    margin-bottom: 21px;
+  }
+  .modal-add__card-img {
+    width: 70px;
+    margin-right: 15px;
+    img {
+      width: 70px;
+      height: 63px;
+    }
+  }
+  .modal-add__card-text {
+    h3 {
+      font-size: 16px;
+      line-height: 130%;
+    }
+    span {
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+  .modal-add__info {
+    flex-direction: column;
+    padding: 0 15px;
+    margin-bottom: 31px;
+    p {
+      font-size: 12px;
+      line-height: 130%;
+    }
+  }
+  .modal-add__info-card {
+    margin-bottom: 14px;
+  }
+  .modal-add__card-option-btn {
+    margin-top: 0;
+    margin-bottom: 11px;
+  }
+  .modal-add__card-option-out {
+    margin-bottom: 5px;
+    input {
+      font-size: 16px;
+    }
+  }
+
+  .modal-add__buttons {
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 15px;
+    margin-bottom: 45px;
+  }
+
+  .modal-add__btn--continue {
+    width: 100%;
+  }
+  .modal-add__btn--checkout {
+    width: 100%;
+  }
+}

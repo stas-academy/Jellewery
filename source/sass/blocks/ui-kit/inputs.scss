@@ -1,0 +1,51 @@
+// Reset
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}
+input, input:before, input:after {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
+input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+button {
+  display: block;
+  // width: 100%;
+}
+
+.btn-popup {
+  width: 100%;
+  padding: 23px 0;
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%; /* or 21px */
+  background-color: $brown;
+  color: $white;
+  border: 1px solid $brown;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    transition: outline 0.3s ease;
+    color: $main;
+    // background-color: rgba($brown, 0.8);
+    outline: 2px solid $main;
+  }
+  &:active {
+    border-color: rgba($brown, 0.3);
+    outline: 2px solid rgba($main, 0.3);
+    color: rgba($main, 0.3);
+  }
+}

@@ -1,0 +1,259 @@
+.blog {
+  margin-bottom: 121px;
+
+
+  h2 {
+    margin: 0;
+    margin-bottom: 17px;
+    font-family: $cormorant;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 130%; /* or 44px */
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $main;
+  }
+}
+
+.blog__link-all {
+  position: relative;
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  margin-bottom: 59px;
+  padding-bottom: 5px;
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%; /* or 21px */
+  color: $main;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 64px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $brown;
+    content: "";
+  }
+
+  &:hover,
+  &:focus {
+    color: $brown;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.blog__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.blog__item {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: $white-grey;
+}
+
+.blog__img {
+  width: 50%;
+  img {
+    height: 100%;
+  }
+}
+
+.blog__blockquote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 50%;
+  margin: 0;
+  padding:20px;
+  background-color: $white-grey;
+  box-sizing: border-box;
+
+  span {
+    display: block;
+    margin-top: -8px;
+    margin-bottom: 14px;
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%; /* or 18px */
+    color: $grey;
+    text-align: center;
+  }
+
+  p {
+    width: 180px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-family: $cormorant;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%; /* or 34px */
+    color: $black;
+    text-align: center;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%; /* or 21px */
+    color: $main;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+      left: 0;
+      width: 97px;
+      height: 1px;
+      margin: 0 auto;
+      background-color: $brown;
+      content: "";
+    }
+
+    &:hover,
+    &:focus {
+      color: $brown;
+
+      &::before {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.blog__item--main {
+  position: relative;
+  height: auto;
+  margin-right: 0;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  .blog__img {
+    width: 100%;
+  }
+
+  blockquote {
+    position: absolute;
+    height: 47.6%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+    margin-left: auto;
+    span {
+      margin-top: -42px;
+    }
+  }
+}
+
+.blog__item:last-child {
+  flex-direction: row-reverse;
+}
+
+//*
+//tablet
+@media (max-width: $tablet-width) {
+  .blog {
+    margin-bottom: 50px;
+  }
+
+  .blog__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog__item {
+    margin-bottom: 20px;
+    order: 1;
+  }
+  .blog__img {
+    img {
+      height: auto;
+    }
+  }
+  .blog__item--main {
+    margin-right: 0;
+    height: 100%;
+    order: 3;
+
+  .blog__img {
+    width: 50%;
+    img {
+      height: auto;
+    }
+  }
+
+    blockquote {
+      position: relative;
+      height: auto;
+      margin: 0;
+      span {
+        margin-top: -6px;
+      }
+    }
+  }
+}
+
+//mobile
+@media (max-width: $mobile-width) {
+  .blog__link-all {
+    margin-bottom: 51px;
+  }
+  .blog__item {
+    width: 100%;
+    margin-bottom: 10px;
+    flex-direction: column;
+
+    .blog__img {
+      width: 100%;
+    }
+
+    .blog__blockquote {
+      width: 100%;
+      span {
+        margin-top: 25px;
+        margin-bottom: 14px;
+      }
+      a {
+        margin-bottom: 33px;
+      }
+    }
+  }
+  .blog__item--main {
+    .blog__blockquote {
+      span {
+        margin-top: 41px;
+      }
+      a {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .blog__item:last-child {
+    flex-direction: column;
+  }
+}
